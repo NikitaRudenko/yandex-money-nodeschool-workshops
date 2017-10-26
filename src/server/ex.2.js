@@ -20,3 +20,16 @@
 //
 // Nyan cat lies here...
 //
+
+const io = require('socket.io')(1921, {
+	transports: ['websocket'],
+	path: '/'
+});
+
+io
+	.of('/')
+	.on('connection', socket => {
+		socket.on('message', data => {
+			socket.emit('message', data);
+		});
+	});

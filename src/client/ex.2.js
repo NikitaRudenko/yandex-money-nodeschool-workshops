@@ -25,9 +25,9 @@ const result = document.getElementsByClassName('result')[0];
 const input = document.getElementsByClassName('text')[0];
 const sendBtn = document.getElementsByClassName('send')[0];
 
-const socket = io('http://ws.rudenko.tech', {
-	path: '/nodeschool/socket.io',
-	transports: ['websocket']
+const socket = io('http://localhost:1921', {
+	transports: ['websocket'],
+	path: '/'
 });
 
 socket.on('connect', () => {
