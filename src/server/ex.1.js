@@ -20,3 +20,13 @@
 //
 // Nyan cat lies here...
 //
+
+const WebSocket = require('ws');
+const ws = new WebSocket.Server({port: 1920});
+
+ws.on('connection', ws => {
+
+	ws.on('message', data => {
+		ws.send(data);
+	});
+});

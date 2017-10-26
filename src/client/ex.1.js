@@ -25,7 +25,7 @@ const result = document.getElementsByClassName('result')[0];
 const input = document.getElementsByClassName('text')[0];
 const sendBtn = document.getElementsByClassName('send')[0];
 
-const ws = new WebSocket('ws://ws.rudenko.tech/nodeschool/ws');
+const ws = new WebSocket('ws://localhost:1920');
 
 ws.onopen = () => {
 	write('Open');
